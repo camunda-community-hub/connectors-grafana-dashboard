@@ -504,7 +504,7 @@
               "uid": "${datasource}"
             },
             "editorMode": "builder",
-            "expr": "sum by(type) (increase(camunda_connector_inbound_triggers_total{action=\"triggered\"}[$__rate_interval]))",
+            "expr": "sum by(type) (rate(camunda_connector_inbound_triggers_total{action=\"triggered\"}[$__rate_interval]))",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
@@ -1383,7 +1383,7 @@
               "uid": "${datasource}"
             },
             "editorMode": "builder",
-            "expr": "sum by(level) (increase(logback_events_total[1m]))",
+            "expr": "sum by(level) (rate(logback_events_total[$__rate_interval]))",
             "legendFormat": "{{level}}",
             "range": true,
             "refId": "A"
