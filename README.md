@@ -20,7 +20,7 @@ docker-compose up
 
 This will start Grafana and Prometheus containers and import the dashboard.
 
-Prometheus is configured to scrape metrics from Connector Runtime at http://localhost:9080/metrics.
+Prometheus is configured to scrape metrics from Connector Runtime at http://localhost:8080/actuator/prometheus.
 If you want to change the URL, update the [`prometheus.yml`](prometheus/prometheus.yml) file.
 
 ## Dashboard
